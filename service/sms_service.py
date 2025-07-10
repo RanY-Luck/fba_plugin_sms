@@ -92,7 +92,7 @@ class SmsService:
                         iso_code=status.IsoCode
                     )
                 )
-
+            log.info(f"腾讯云短信发送成功: {send_status_set}")
             return SendSmsResponse(
                 send_status_set=send_status_set,
                 request_id=resp.RequestId
